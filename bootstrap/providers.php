@@ -43,4 +43,12 @@ return [
     Webkul\Tax\Providers\TaxServiceProvider::class,
     Webkul\Theme\Providers\ThemeServiceProvider::class,
     Webkul\User\Providers\UserServiceProvider::class,
+
+    /**
+     * SRP custom service providers.
+     */
+    Srp\Core\Providers\CoreServiceProvider::class,
+    Srp\Connector\Providers\ConnectorServiceProvider::class,
+    Srp\Pricing\Providers\PricingServiceProvider::class,
+    Srp\Theme\Providers\ThemeServiceProvider::class,
 ];

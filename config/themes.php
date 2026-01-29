@@ -10,11 +10,23 @@ return [
     |
     */
 
-    'shop-default' => 'default',
+    'shop-default' => 'srp-default',
 
     'shop' => [
+        'srp-default' => [
+            'name' => 'SRP Default',
+            'assets_path' => 'public/vendor/srp/theme',
+            'views_path' => 'packages/Srp/Theme/resources/views/shop',
+
+            'vite' => [
+                'hot_file' => 'srp-default-vite.hot',
+                'build_directory' => 'vendor/srp/theme/build',
+                'package_assets_directory' => 'src/Resources/assets',
+            ],
+        ],
+
         'default' => [
-            'name' => 'Default',
+            'name' => 'Bagisto Default',
             'assets_path' => 'public/themes/shop/default',
             'views_path' => 'resources/themes/default/views',
 
