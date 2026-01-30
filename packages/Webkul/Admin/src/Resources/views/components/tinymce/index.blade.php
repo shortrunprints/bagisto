@@ -401,9 +401,17 @@
                                 }
                             });
 
-                            editor.on('keyup', () => {
+                            // Sync TinyMCE content to form field on multiple events
+                            const syncContent = () => {
                                 this.field.onInput(editor.getContent());
-                            });
+                            };
+
+                            editor.on('keyup', syncContent);
+                            editor.on('change', syncContent);
+                            editor.on('blur', syncContent);
+                            editor.on('input', syncContent);
+                            editor.on('paste', syncContent);
+                            editor.on('SetContent', syncContent);
                         },
                     });
                 },
